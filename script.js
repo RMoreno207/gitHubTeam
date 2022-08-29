@@ -24,8 +24,9 @@ document.getElementById("form1").addEventListener("submit", function (event) {
 
 
     for (const key in form) {
-        if (userPass.user1 == form[key].user && userPass.pass1 == form[key].pass) {
-            console.log("Bienvenido!" + form[key].user);;
+        if (user1 == form[key].user && pass1 == form[key].pass) {
+            console.log("Bienvenido!" + form[key].user);
+            break;
         } else {
             console.log("Usuario no registrado");
             break;
