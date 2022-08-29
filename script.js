@@ -18,17 +18,20 @@ function validateUser() {
 
 document.getElementById("form1").addEventListener("submit", function (event) {
     event.preventDefault();
-    //Añadido RegEx de medium strong
-    let regEx = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
-    let email = event.target.elements.email.value;
-    let pass = event.target.elements.pass.value;
-    let pass2 = event.target.elements.pass2.value;
-
-    if (regEx.test(pass)) {
-        pass === pass2 ? signUpUser(email, pass) : alert("error password");
+    let user1 = event.target.elements.user.value;
+    let pass1 = event.target.elements.pass.value;
+    const userPass = {
+        user: user1,
+        pass: pass1
     }
-    else {
-        alert("Your password is too weak");
+
+
+
+    for (const key in form) {
+        if (userPass.user1 == form[key].user && userPass.pass1 == form[key].pass) {
+            console.log("Bienvenido!" + form[key].user);;
+        } else {
+            console.log("Usuario no registrado");
+        }
     }
 })
-    }
