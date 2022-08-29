@@ -1,18 +1,14 @@
-function validateUser() {
-
-    const form = [{
-        user: "pepe",
-        pass: "1234"
-    }, {
-        user: "paco",
-        pass: "1234"
-    }, {
-        user: "juan",
-        pass: "1234"
-    }
-    ];
-
+const form = [{
+    user: "pepe@a.com",
+    pass: "1234"
+}, {
+    user: "paco@a.com",
+    pass: "1234"
+}, {
+    user: "juan@a.com",
+    pass: "1234"
 }
+];
 
 
 
@@ -32,6 +28,7 @@ document.getElementById("form1").addEventListener("submit", function (event) {
             console.log("Bienvenido!" + form[key].user);;
         } else {
             console.log("Usuario no registrado");
+            break;
         }
     }
 })
